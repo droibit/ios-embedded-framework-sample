@@ -1,27 +1,21 @@
-# Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
 
 target 'Core' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Core
+  pod 'Firebase/Analytics', '6.31.0', :modular_headers => true
 
   target 'CoreTests' do
-    # Pods for testing
-  end
-
-end
-
-target 'EmbeddedFW-Sample' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for EmbeddedFW-Sample
-
-  target 'EmbeddedFW-SampleTests' do
     inherit! :search_paths
-    # Pods for testing
   end
+
+  target 'EmbeddedFW-Sample' do
+    #use_frameworks!
+    inherit! :search_paths
+
+    pod 'PKHUD', '5.3'
+
+    target 'EmbeddedFW-SampleTests' do
+      inherit! :search_paths
+    end
+  end  
 
 end

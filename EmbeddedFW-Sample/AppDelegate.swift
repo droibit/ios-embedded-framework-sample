@@ -7,6 +7,7 @@
 //
 
 import Core
+import Firebase
 import UIKit
 
 @UIApplicationMain
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private (set) var component: AppComponent!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        
         // Override point for customization after application launch.
         registerProviderFactories()
         

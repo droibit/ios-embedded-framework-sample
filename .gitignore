@@ -79,3 +79,6 @@ NeedleGenerated.swift
 
 # Cuckoo
 GeneratedMocks.swift
+
+# Firebase
+GoogleService-Info.plist

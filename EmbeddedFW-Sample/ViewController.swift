@@ -7,6 +7,7 @@
 //
 
 import Core
+import PKHUD
 import RxSwift
 import UIKit
 
@@ -22,10 +23,12 @@ class ViewController: UIViewController {
             .inject(to: self)
         
         _ = sampleRepository.getSampleText()
+            .delay(.milliseconds(500), scheduler: mainScheduler)
             .observeOn(mainScheduler)
-        .subscribe(onSuccess: { text in
-            print("text: \(text)")
-        })
+            .subscribe(onSuccess: { text in
+                print("text: \(text)")
+                HUD.flash(.label(text), delay: 3.0)
+            })    
     }
 }
 

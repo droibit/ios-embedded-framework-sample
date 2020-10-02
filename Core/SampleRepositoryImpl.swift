@@ -6,12 +6,16 @@
 //  Copyright © 2020 Shinya Kumagai. All rights reserved.
 //
 
-import Foundation
+import FirebaseAnalytics
 import RxSwift
 
 class SampleRepositoryImpl: SampleRepository {
     
     func getSampleText() -> Single<String> {
         return Single.just("Hello, world!!")
+    }
+    
+    func setAnalyticsCollectionEnabled(_ enabled: Bool) {
+        Analytics.setAnalyticsCollectionEnabled(enabled)
     }
 }

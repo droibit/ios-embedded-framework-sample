@@ -11,4 +11,6 @@ import RxSwift
 
 public protocol SampleRepository {    
     func getSampleText() -> Single<String>
+    
+    func setAnalyticsCollectionEnabled(_ enabled: Bool)
 }
