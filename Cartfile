@@ -1,5 +1,2 @@
-github "ReactiveX/RxSwift" == 5.1.1
-github "https://github.com/uber/needle.git" == 0.15.1
-
-github "Brightify/Cuckoo" == 1.4.1
-github "Quick/Nimble" == 8.1.2
+github "ReactiveX/RxSwift" == 6.1.0
+github "https://github.com/uber/needle.git" == 0.17.1
